@@ -1,0 +1,17 @@
+name: Notification on push
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Discord notifications
+        uses: cl8dep/action-discord@main
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message: A new commit has been pushed to cl8dep/action-discord.
