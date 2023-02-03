@@ -1,0 +1,23 @@
+name: 'Discord notifications'
+description: 'Send a message to Discord chanel'
+branding:
+  icon: message-square
+  color: blue
+inputs:
+  webhook:
+    description: 'The Webhook URL used to access to Discord chanel'
+    required: true
+  message:
+    description: 'The message'
+    required: true
+  username:
+    description: 'Username'
+    required: false
+    default: 'Github'
+  avatar:
+    description: 'Bot avatar'
+    required: false
+    default: 'https://avatars.githubusercontent.com/u/9919?s=280&v=4'
+runs:
+  using: 'node16'
+  main: './dist/entrypoint.js'

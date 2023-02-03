@@ -1,0 +1,29 @@
+{
+  "name": "action-discord2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "ncc build src/entrypoint.ts -o dist --source-map --license licenses.txt",
+    "test": "jest --testPathPattern=src/"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@vercel/ncc": "^0.36.1",
+    "axios": "^1.3.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "jest": "^29.4.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cl8dep/action-discord.git"
+  }
+}
